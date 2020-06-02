@@ -1,0 +1,129 @@
+{
+  "queries": [
+    [
+      {
+        "target": {
+          "record": {
+            "type": "bib"
+          },
+          "id": 30
+        },
+        "expr": {
+          "op": "equals",
+          "operands": [
+            "g",
+            ""
+          ]
+        }
+      },
+      "or",
+      {
+        "target": {
+          "record": {
+            "type": "bib"
+          },
+          "id": 30
+        },
+        "expr": {
+          "op": "equals",
+          "operands": [
+            "u",
+            ""
+          ]
+        }
+      }
+    ],
+    "and",
+    [
+      {
+        "target": {
+          "record": {
+            "type": "bib"
+          },
+          "field": {
+            "tag": "t"
+          }
+        },
+        "expr": {
+          "op": "has",
+          "operands": [
+            "season",
+            ""
+          ]
+        }
+      },
+      "or",
+      {
+        "target": {
+          "record": {
+            "type": "bib"
+          },
+          "field": {
+            "tag": "t"
+          }
+        },
+        "expr": {
+          "op": "has",
+          "operands": [
+            "series",
+            ""
+          ]
+        }
+      }
+    ],
+    "and",
+    {
+      "target": {
+        "record": {
+          "type": "bib"
+        },
+        "field": {
+          "tag": "u"
+        }
+      },
+      "expr": {
+        "op": "all_fields_not_have",
+        "operands": [
+          "television program",
+          ""
+        ]
+      }
+    },
+    "and",
+    {
+      "target": {
+        "record": {
+          "type": "bib"
+        },
+        "field": {
+          "tag": "^"
+        }
+      },
+      "expr": {
+        "op": "exists",
+        "operands": [
+          "i",
+          ""
+        ]
+      }
+    },
+    "and",
+    {
+      "target": {
+        "record": {
+          "type": "bib"
+        },
+        "field": {
+          "tag": "t"
+        }
+      },
+      "expr": {
+        "op": "all_fields_not_have",
+        "operands": [
+          "eclipse series",
+          ""
+        ]
+      }
+    }
+  ]
+}
